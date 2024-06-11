@@ -23,9 +23,9 @@ def main():
     print("Welcome to the Math App!!!")
     print("")  # line break
     ### write code to complete this function BELOW here ###
-    die_1_value = 0
-    die_2_value = 0
-    question_type = "sum"
+    die_1_value = roll_die()
+    die_2_value = roll_die()
+    question_type = get_question_type()
     given_answer = 0
 
 
