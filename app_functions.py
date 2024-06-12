@@ -27,7 +27,7 @@ def get_question_type():
     """
     # complete this function below here
     qtype = random.randint(1,6)
-    if qtype == [1,3,5]:
+    if qtype == 1 or qtype == 3 or qtype == 5:
         return "sum"
     else:
         return "difference"
@@ -51,9 +51,6 @@ def print_question(die_1_value, die_2_value, question_type):
     :returns: None
     """
     # complete this function below here
-    die_1_value = roll_die()
-    die_2_value = roll_die()
-    question_type = get_question_type()
     if question_type == "sum":
         middle = "of"
     else:
@@ -77,7 +74,7 @@ def input_answer():
     if given_answer.isnumeric() is False:
         return -1
     else:
-        return given_answer
+        return int(given_answer)
 
 
 def is_correct_answer(die_1_value, die_2_value, question_type, given_answer):

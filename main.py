@@ -26,17 +26,17 @@ def main():
     die_1_value = roll_die()
     die_2_value = roll_die()
     question_type = get_question_type()
-    given_answer = 0
+
 
 
     print_question(die_1_value, die_2_value, question_type)
-    input_answer()
-    if input_answer() == -1:
+    given_answer = input_answer()
+    if given_answer == -1:
         print_error_message()
-    if is_correct_answer(die_1_value, die_2_value, question_type, given_answer) is True:
+    elif is_correct_answer(die_1_value, die_2_value, question_type, given_answer) is True:
         print_congratulations(question_type)
-    else:
-        print_correct_answer(die_1_value, die_2_value, question_type)
+    elif is_correct_answer(die_1_value, die_2_value, question_type, given_answer) is False:
+        print_correct_answer(die_1_value, die_2_value, question_type) 
     
 
     ### write code to complete this function ABOVE here ###
